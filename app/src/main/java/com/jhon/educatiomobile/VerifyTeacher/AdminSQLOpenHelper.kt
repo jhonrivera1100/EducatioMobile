@@ -22,7 +22,7 @@ class AdminSQLOpenHelper(context: Context?) : SQLiteOpenHelper(context, NOMBRE_B
 
     override fun onCreate(db: SQLiteDatabase) {
         val crearTablaDocentes = ("CREATE TABLE $TABLA_DOCENTES ($COLUMNA_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "$COLUMNA_NOMBRE_COMPLETO TEXT, $COLUMNA_NOMBRE_USUARIO TEXT, $COLUMNA_CONTRASEÑA TEXT, " +
+                "$COLUMNA_NOMBRE_COMPLETO TEXT, $COLUMNA_NOMBRE_USUARIO TEXT, $COLUMNA_CONTRASEÑA PASSWORD, " +
                 "$COLUMNA_IDENTIFICACION TEXT, $COLUMNA_CORREO TEXT, $COLUMNA_TELEFONO TEXT, " +
                 "$COLUMNA_HOJA_DE_VIDA TEXT)")
         db.execSQL(crearTablaDocentes)
