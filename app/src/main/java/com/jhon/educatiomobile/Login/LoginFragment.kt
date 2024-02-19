@@ -1,4 +1,4 @@
-package com.jhon.educatiomobile.actividades
+package com.jhon.educatiomobile.Login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
