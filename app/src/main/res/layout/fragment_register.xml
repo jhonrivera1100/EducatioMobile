@@ -1,47 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register"
+    tools:context=".Register.RegisterFragment"
     tools:ignore="MissingClass">
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="271dp" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="343dp" />
-
-    <ScrollView
-        android:layout_width="362dp"
-        android:layout_height="696dp"
+    <RelativeLayout
+        android:layout_width="389dp"
+        android:layout_height="453dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="41dp"
+            android:elevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="Telefono"
+                    android:inputType="phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+
+                <EditText
+                    android:id="@+id/editTextText2"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Nombre Completo"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+                <EditText
+                    android:id="@+id/editTextTextEmailAddress"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="Correo Electronico"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Hoja De Vida"
+                    android:textColor="#616161"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+                <EditText
+                    android:id="@+id/editTextTextPassword"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+                <EditText
+                    android:id="@+id/editTextDate"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="Fecha Nacimiento"
+                    android:inputType="date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+                <EditText
+                    android:id="@+id/editTextText3"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="Ciudad"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+                <EditText
+                    android:id="@+id/editTextText"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="140dp"
+                    android:ems="10"
+                    android:hint="Numero Identificacion"
+                    android:inputType="number"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
